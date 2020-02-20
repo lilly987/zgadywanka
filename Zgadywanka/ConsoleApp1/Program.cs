@@ -9,10 +9,17 @@ namespace ConsoleApp1
             Console.WriteLine("Gra za dużo za mało");
 
             //1.Komputer losuje
-            Random los = new Random(); // tworze obiekt typu random
+            #region losowanie
+            var los = new Random(); // tworze obiekt typu random
             int wylosowana = los.Next(1,101);
+
+#if DEBUG
+
             Console.WriteLine(wylosowana);
+
+#endif
             Console.WriteLine("wylosowalem liczbe od 1 do 100. \nOdgadnij ja!");
+            #endregion
 
             bool odgadniete = false;
             //dopóki nie odgadniesz
@@ -43,6 +50,7 @@ namespace ConsoleApp1
                 Console.ResetColor();
                     odgadniete = true;
             }
+
                 Console.WriteLine("koniec GRY");
             }
         }
