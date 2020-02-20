@@ -14,6 +14,11 @@ namespace ConsoleApp1
             Console.WriteLine(wylosowana);
             Console.WriteLine("wylosowalem liczbe od 1 do 100. \nOdgadnij ja!");
 
+            bool odgadniete = false;
+            //dopóki nie odgadniesz
+            while (! odgadniete)
+            {
+
             //2.Człowiek proponuje
             Console.Write("Podaj swoja propozycje: ");
             int propozycja = int.Parse(Console.ReadLine());
@@ -36,6 +41,9 @@ namespace ConsoleApp1
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("trafiono");
                 Console.ResetColor();
+                    odgadniete = true;
+            }
+                Console.WriteLine("koniec GRY");
             }
         }
     }
